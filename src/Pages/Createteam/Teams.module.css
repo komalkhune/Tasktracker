@@ -1,0 +1,221 @@
+.managercontainer {
+    min-height: 100vh;
+    padding: 30px;
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+}
+
+/* Employee Cards */
+.mapdata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+   
+}
+
+.emdata {
+    background: #fff;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+   
+}
+
+
+
+.emdata p {
+    margin: 10px 0;
+    font-size: 15px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Buttons */
+.emdata button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.emdata button:first-of-type {
+    background: #2563eb;
+    color: white;
+}
+
+
+.emdata button:last-of-type {
+    background: #ef4444;
+    color: white;
+}
+
+
+/* Popup Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+}
+
+/* Popup Form */
+.popup {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    /* animation: popupOpen 0.3s ease; */
+}
+
+/* @keyframes popupOpen {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+} */
+
+.popup h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e293b;
+    font-size: 26px;
+}
+
+/* Input Fields */
+.inputfield {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.inputfield:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 10px rgba(37,99,235,0.2);
+}
+
+/* Radio */
+.radio {
+    margin-top: 10px;
+}
+
+.lable {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Form Buttons */
+.updateformbtn {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.updateformbtn button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.updateformbtn button:first-child {
+    background: #16a34a;
+    color: white;
+}
+
+.updateformbtn button:first-child:hover {
+    background: #15803d;
+}
+
+.updateformbtn button:last-child {
+    background: #ef4444;
+    color: white;
+}
+
+.updateformbtn button:last-child:hover {
+    background: #dc2626;
+}
+
+/* Error Box */
+.errorbox {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.successbox{
+     background: #fee2e2;
+    color: green;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.closebtn {
+    margin-top: 10px;
+    border: none;
+    background: crimson;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.teamlead strong{
+    color: red;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .managercontainer {
+        padding: 15px;
+    }
+
+    .mapdata {
+        grid-template-columns: 1fr;
+    }
+
+    .popup {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .popup h3 {
+        font-size: 22px;
+    }
+
+    .updateformbtn {
+        flex-direction: column;
+    }
+}
